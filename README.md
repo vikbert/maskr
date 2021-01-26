@@ -1,30 +1,20 @@
-# 口罩即時查 Mask Map (Taiwan)
+# Maskr
 
-## Data from
+Realtime Mask Radar
 
-https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json
-
-## Build
-
-### Project setup
-
+## Getting started
 ```
 npm install
+npm run dev
 ```
 
-#### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-#### Compiles and minifies for production
+#### Build
 
 ```
 npm run build
 ```
 
-#### Lints and fixes files
+#### Linter
 
 ```
 npm run lint
