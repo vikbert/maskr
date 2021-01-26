@@ -5,5 +5,5 @@ module.exports = {
       title: 'Mask Radar'
     }
   },
-  publicPath: '/maskr/'
+  publicPath: '/'
 }

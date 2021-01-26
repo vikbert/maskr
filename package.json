@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build",
+    "start": "npm run build && sirv dist",
     "lint": "vue-cli-service lint",
     "deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages",
     "test": "echo 'skip tests (there is no test)'"
@@ -21,7 +22,8 @@
     "vue-spinner": "1.0.4",
     "vue2-leaflet": "2.6.0",
     "vue2-leaflet-markercluster": "3.1.0",
-    "vue2-perfect-scrollbar": "1.5.0"
+    "vue2-perfect-scrollbar": "1.5.0",
+    "sirv-cli": "^1.0.10"
   },
   "devDependencies": {
     "@babel/runtime": "7.12.5",
