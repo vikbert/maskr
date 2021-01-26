@@ -1,3 +1,3 @@
 ## Data from
 
-https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json
+https://raw.githubusercontent.com/vikbert/maskr/master/data/points.json
