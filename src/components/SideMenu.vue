@@ -47,7 +47,7 @@
             name="districts"
             v-model="selectedDistrict"
           >
-            <option value="">---選擇行政區---</option>
+            <option value="">---Regions---</option>
             <option
               v-for="(item, key) in getDistricts"
               :key="key"
@@ -60,9 +60,9 @@
         </div>
       </div>
       <div class="title_day">
-        <div class="text_big">{{ day ? '奇' : '偶' }}數</div>
-        <div class="text">購買日</div>
-        <div class="info">
+        <div class="text_big">Mask</div>
+        <div class="text">Inventory</div>
+        <!-- <div class="info">
           <a
             href="https://g0vhackmd.blob.core.windows.net/g0v-hackmd-images/upload_9d7620679dcf6fd6e5b9bad48dacbf85"
             target="_blank"
@@ -70,14 +70,14 @@
               src="@/assets/ic_help@2x.png"
               alt=""
             /></a>
-        </div>
+        </div> -->
       </div>
       <div class="data_info">
         <div class="info">
-          <span>{{ selectedCity }} {{ selectedDistrict }} 內的供應商</span>
-          <span>資訊更新時間 {{ updateTime }}</span>
+          <span>State of the mask inventory in {{ selectedCity }} {{ selectedDistrict }}</span>
+          <span>updated {{ updateTime }}</span>
         </div>
-        <button @click="$parent.getMaskData()">重整列表</button>
+        <button @click="$parent.getMaskData()">Refresh</button>
       </div>
       <div class="cards">
         <div class="card-list">
@@ -102,7 +102,7 @@
 <script>
   import { PerfectScrollbar } from "vue2-perfect-scrollbar";
   import "vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css";
-  import cities from "../data-zh";
+  import cities from "../data-de";
   import Card from "./Card";
   export default {
     components: { Card, PerfectScrollbar },
@@ -112,7 +112,7 @@
         cities: cities,
         toggle: false,
         day: true,
-        selectedCity: "台北市",
+        selectedCity: "Rostock",
         selectedDistrict: "",
         updateTime: "None",
         scrollOptions: {
@@ -156,13 +156,15 @@
     },
     computed: {
       getDistricts: function() {
-        if (this.selectedCity == "") {
-          return [];
-        }
-        const data = this.cities.districts[
-          cities.counties.indexOf(this.selectedCity)
-        ];
-        return data[0];
+        return [];
+
+        // if (this.selectedCity == "") {
+        //   return [];
+        // }
+        // const data = this.cities.districts[
+        //   cities.counties.indexOf(this.selectedCity)
+        // ];
+        // return data[0];
       },
       filterData: function() {
         if (this.selectedDistrict == "") {
@@ -218,6 +220,7 @@
     border-radius: 10px;
     background: #ffffff;
     font: 16px/16px Noto Sans TC;
+    line-height: 22px;
     color: #34495e;
     appearance: none;
     -webkit-appearance: none;

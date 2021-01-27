@@ -45,9 +45,9 @@ export default {
   data() {
     return {
       isLoading: true,
-      center: [25.03746, 121.564558],
-      bounds: L.latLngBounds([20.72799, 118.1036], [26.60305, 122.9312]),
-      zoom: 12,
+      center: [54.0887, 12.14049],
+      bounds: L.latLngBounds([54.091328, 12.133647], [54.086784, 12.150341]),
+      zoom: 16,
       minZoom: 8,
       url: 'https://{s}.tile.osm.org/{z}/{x}/{y}.png',
       attribution:

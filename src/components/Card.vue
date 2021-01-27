@@ -46,11 +46,11 @@
         <div class="data">{{ data.properties.phone }}</div>
         <div class="check">
           <a :href="'tel:' + data.properties.phone.replace(/\s*/g, '')"></a>
-          撥打電話
+          Telefon
         </div>
       </div>
       <div class="line">
-        <div class="title">備註</div>
+        <div class="title">Notes</div>
         <div class="data">
           {{ data.properties.custom_note || data.properties.note }}
         </div>
