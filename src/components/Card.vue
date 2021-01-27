@@ -7,16 +7,16 @@
       >
         <div class="text">Mask for adults</div>
         <div class="num">
-          {{ data.properties.mask_adult }}<span class="unit">pics.</span>
+          {{ data.properties.mask_adult || 1000}}<span class="unit">pics.</span>
         </div>
       </div>
       <div
         class="child"
-        :class="maskClass(data.properties.mask_child)"
+        :class="maskClass(data.properties.mask_child || 1000)"
       >
         <div class="text">Mask for children</div>
         <div class="num">
-          {{ data.properties.mask_child }}<span class="unit">pics.</span>
+          {{ data.properties.mask_child || 1000}}<span class="unit">pics.</span>
         </div>
       </div>
     </div>
