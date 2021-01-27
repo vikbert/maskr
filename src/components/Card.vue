@@ -32,7 +32,7 @@
     </div>
     <div class="info">
       <div class="line">
-        <div class="title">地址</div>
+        <div class="title">Address</div>
         <div class="data">{{ data.properties.address }}</div>
         <div class="check">
           <a
@@ -42,10 +42,10 @@
         </div>
       </div>
       <div class="line">
-        <div class="title">電話</div>
+        <div class="title">Telefon</div>
         <div class="data">{{ data.properties.phone }}</div>
         <div class="check">
-          <a :href="'tel:' + data.properties.phone.replace(/\s*/g, '')"></a>
+          <!-- <a :href="'tel:' + data.properties.phone.replace(/\s*/g, '')"></a> -->
           Telefon
         </div>
       </div>
