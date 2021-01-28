@@ -56,6 +56,7 @@ export default {
       this.isLoading = true;
       const response = await this.axios.get(this.api);
       this.maskData = await Object.freeze(response.data.features);
+      console.log(this.maskData);
       this.isLoading = false;
     },
     updateSelected(item) {

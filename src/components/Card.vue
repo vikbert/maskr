@@ -25,7 +25,7 @@
       <!-- <div class="km">1.2km</div> -->
       <div
         class="is-open"
-        :class="{'open': isOpen(data.properties.available) == '營業中'}"
+        :class="{'open': isOpen(data.properties.available) == 'Open'}"
       >
         {{ isOpen(data.properties.available) }}
       </div>
@@ -97,9 +97,9 @@
         } else if (1080 <= t && t <= 1230) {
           zone = 2;
         } else {
-          return "休息中";
+          return "Lunch Hour";
         }
-        return timeArray[zone][day] ? "營業中" : "休息中";
+        return timeArray[zone][day] ? "Open" : "Lunch Hour";
       },
       mapUrl(val) {
         return `https://www.google.com/maps/search/?api=1&query=${val.name} ${val.address}`;
