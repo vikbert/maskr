@@ -2,13 +2,13 @@
   <div class="card">
     <div class="mask-num">
       <div class="adult" :class="maskClass(data.properties.mask_adult)">
-        <div class="text">Mask for adults</div>
+        <div class="text">Mask for adult</div>
         <div class="num">
           {{ data.properties.mask_adult }}<span class="unit">pics.</span>
         </div>
       </div>
       <div class="child" :class="maskClass(data.properties.mask_child)">
-        <div class="text">Mask for children</div>
+        <div class="text">Mask for child</div>
         <div class="num">
           {{ data.properties.mask_child}}<span class="unit">pics.</span>
         </div>
@@ -46,15 +46,14 @@
         <div class="title">Telefon</div>
         <div class="data">{{ data.properties.telefon_festnetz }}</div>
         <div class="check">
-          <!-- <a :href="'tel:' + data.properties.phone.replace(/\s*/g, '')"></a> -->
           Telefon
         </div>
       </div>
       <div class="line">
-        <div class="title">Notes</div>
-        <!-- <div class="data">
-          {{ data.properties.custom_note || data.properties.note }}
-        </div> -->
+        <div class="title">Opening:</div>
+        <div class="data">
+          {{ data.properties.oeffnungszeiten}}
+        </div>
       </div>
     </div>
   </div>
@@ -234,6 +233,7 @@ export default {
         color: #34495e;
       }
       > .data {
+        width: 170px;
         margin-left: 10px;
       }
       > .check {
