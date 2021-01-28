@@ -67,6 +67,7 @@ export default {
           // CSS Class
           const adult = geoJsonPoint.properties.mask_adult
           const child = geoJsonPoint.properties.mask_child
+
           let adultClass = ''
           let childClass = ''
           if (adult == 0) {

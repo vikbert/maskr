@@ -82,7 +82,7 @@
       <div class="cards">
         <div class="card-list">
           <Card
-            v-for="item in filterData"
+            v-for="item in data"
             :key="item.properties.id"
             :data="item"
             @click.native="updateShow(item)"
@@ -171,7 +171,8 @@
           return this.data
             .filter(
               item =>
-                item.properties.county.replace(/臺/g, "台") == this.selectedCity
+                //item.properties.county.replace(/臺/g, "台") == this.selectedCity
+                item.properties.county == this.selectedCity
             )
             .sort((a, b) => {
               return b.properties.mask_adult - a.properties.mask_adult;
@@ -179,9 +180,12 @@
         } else {
           return this.data
             .filter(item => {
-              const address = item.properties.address.replace(/臺/g, "台");
+              //const address = item.properties.address.replace(/臺/g, "台");
+              const address = item.properties.address;
               return (
-                item.properties.county.replace(/臺/g, "台") ==
+                /*item.properties.county.replace(/臺/g, "台") ==
+                  this.selectedCity && address.includes(this.selectedDistrict)*/
+                item.properties.county ==
                   this.selectedCity && address.includes(this.selectedDistrict)
               );
             })
